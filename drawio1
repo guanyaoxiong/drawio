@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="useCaseDiagram" name="社团系统用例图">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- 参与者 -->
+        <mxCell id="actor_student" value="学生" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="60" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_president" value="社团联合会会长" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="60" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_secretary" value="校团委书记" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="60" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor_clubLeader" value="社团负责人" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="550" width="60" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- 用例 -->
+        <mxCell id="uc_applyClub" value="提交社团成立申请" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_approveByPresident" value="会长审批社团" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_approveBySecretary" value="校团委审批社团" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_modifyPassword" value="修改初始密码" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_searchClub" value="搜索社团" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="180" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_joinExitClub" value="申请加入/退出社团" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="260" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_applyActivity" value="申请组织活动" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="340" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_pushNotice" value="推送社团通知" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="200" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_reviewJoin" value="审批加入申请" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="280" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_submitSummary" value="提交活动/工作总结" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="440" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_dissolveSuspendClub" value="解散/暂停社团" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="100" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_yearlyEval" value="年终评价" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="260" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_publishEval" value="公布评价结果" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="340" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关联线 -->
+        <mxCell id="edge1" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_applyClub">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge2" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_president" target="uc_approveByPresident">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge3" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_secretary" target="uc_approveBySecretary">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge4" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_modifyPassword">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge5" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_searchClub">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge6" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_joinExitClub">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge7" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_applyActivity">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge8" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_clubLeader" target="uc_pushNotice">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge9" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_clubLeader" target="uc_reviewJoin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge10" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_clubLeader" target="uc_submitSummary">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge11" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_president" target="uc_dissolveSuspendClub">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge12" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_student" target="uc_yearlyEval">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge13" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_president" target="uc_yearlyEval">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge14" value="" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="actor_clubLeader" target="uc_yearlyEval">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
