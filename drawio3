@@ -1,0 +1,122 @@
+<mxfile host="app.diagrams.net" modified="2023-10-15T12:00:00.000Z" version="22.1.17">
+  <diagram name="Page-1" id="1a9b4d5e-3c8f-4a7b-9e6d-0f1a2b3c4d5e">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 用例图：社团成立流程 -->
+        <mxCell id="usecase-1" value="社团成立流程" style="shape=umlUseCase;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-1" value="社团发起人" style="shape=umlActor;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-2" value="社团联合会会长" style="shape=umlActor;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-3" value="校团委书记" style="shape=umlActor;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase-2" value="提出申请" style="shape=umlUseCase;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase-3" value="会长审批" style="shape=umlUseCase;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="usecase-4" value="书记审批" style="shape=umlUseCase;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="actor-1" target="usecase-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-2" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="usecase-2" target="usecase-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-3" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="usecase-3" target="usecase-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-4" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="usecase-4" target="actor-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 类图：核心类关系 -->
+        <mxCell id="class-1" value="社团" style="shape=umlClass;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="class-2" value="学生" style="shape=umlClass;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="250" y="300" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="class-3" value="社团负责人" style="shape=umlClass;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="relation-1" style="endArrow=none;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="class-1" target="class-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="350" as="sourcePoint" />
+            <mxPoint x="250" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relation-2" style="endArrow=none;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="class-1" target="class-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 顺序图：活动总结提交 -->
+        <mxCell id="seq-1" value="活动总结提交" style="shape=umlSequence;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lifeline-1" value="组织者" style="shape=umlLifeline;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="60" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lifeline-2" value="社团联合会网站" style="shape=umlLifeline;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="80" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="message-1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="lifeline-1" target="lifeline-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="520" as="sourcePoint" />
+            <mxPoint x="200" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- 状态机图：社团状态 -->
+        <mxCell id="state-1" value="社团状态" style="shape=umlState;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="400" y="450" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="state-2" value="申请中" style="shape=umlState;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="state-3" value="已成立" style="shape=umlState;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="520" y="480" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="state-4" value="活动暂停" style="shape=umlState;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="520" y="540" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="transition-1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="state-2" target="state-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transition-2" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;" edge="1" parent="1" source="state-3" target="state-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 通信图：消息推送 -->
+        <mxCell id="comm-1" value="消息推送流程" style="shape=umlCommunication;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="obj-1" value="社团联合会APP" style="shape=umlObject;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="730" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="obj-2" value="学生" style="shape=umlObject;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="200" y="730" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msg-1" style="endArrow=classic;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;endFill=1;endSize=8;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="obj-1" target="obj-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="750" as="sourcePoint" />
+            <mxPoint x="200" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
