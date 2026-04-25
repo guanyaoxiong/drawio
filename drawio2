@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="classDiagram" name="社团系统类图">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- 实体类 -->
+        <mxCell id="class_student" value="Student
+---
+- studentId: String
+- name: String
+- major: String
+- grade: String
+---
++ searchClub()
++ applyJoinClub()
++ applyExitClub()
++ submitSuggestion()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="180" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_account" value="UserAccount
+---
+- accountId: String
+- username: String
+- password: String
+- isPasswordChanged: boolean
+---
++ modifyPassword()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="100" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_club" value="Club
+---
+- clubId: String
+- clubName: String
+- status: String
+- createDate: Date
+---
++ dissolve()
++ suspendActivity()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="160" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_clubMember" value="ClubMember
+---
+- joinDate: Date
+- role: String
+---
++ exitClub()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="320" width="160" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_clubLeader" value="ClubLeader
+---
+- position: String
+- term: Date
+---
++ pushNotice()
++ reviewJoinApplication()
++ submitSummary()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="320" width="180" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_activity" value="Activity
+---
+- activityId: String
+- activityName: String
+- status: String
+---
++ submitPlan()
++ submitSummary()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="320" width="160" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_application" value="Application
+---
+- appId: String
+- appType: String
+- status: String
+---
++ review()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="520" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_notice" value="Notice
+---
+- noticeId: String
+- content: String
+- sendDate: Date
+---
++ send()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="520" width="160" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="class_evaluation" value="Evaluation
+---
+- evalId: String
+- score: int
+- comment: String
+---
++ calculateFinalScore()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="160" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- 边界类（绿色） -->
+        <mxCell id="boundary_appUI" value="<<Boundary>>
+ClubAPPUI
+---
++ showClubList()
++ submitApplication()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="850" y="100" width="140" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="boundary_webUI" value="<<Boundary>>
+ClubWebsiteUI
+---
++ submitForm()
++ publishResult()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="850" y="280" width="140" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- 控制类（黄色） -->
+        <mxCell id="control_controller" value="<<Control>>
+ClubSystemController
+---
++ processClubCreation()
++ manageApplications()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="850" y="460" width="140" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- 关系线 -->
+        <mxCell id="rel_student_account" value="1..1" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="class_student" target="class_account">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel_student_clubMember" value="*" style="endArrow=block;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="class_student" target="class_clubMember">
